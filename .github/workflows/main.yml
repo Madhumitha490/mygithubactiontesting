@@ -10,4 +10,7 @@ jobs:
       uses: actions/checkout@v1
       with: 
          who-to-greet: 'Madhu'
+    # Use the output from `hello` step
+    - name: Get the output time
+      run: echo "The time was ${[ steps.hello.outputs.time }}"
     
